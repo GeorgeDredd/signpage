@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sign up Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main2.css">
+  <link href="fonts/css/all.css" rel="stylesheet">
+	<!-- <link rel="icon" href="images/icons/favicon.ico" type="image/ico"> -->
+	<!-- <link rel="icon" href="images/icons/favicon.png"> -->
+
+</head>
+    <body onload="clearForm()">
+		<div class="container">
+			<div class="wrap-login" id="login-box">
+				<form action="" class="login-form" id="main-form" autocomplete="off" formnovalidate >
+						<h1>Sign up to continue</h1>
+						<div class="field" id="field-wrap">
+							<input type="email" name="login" id="email" placeholder="Enter your email" oninput="typeEmail(this.value)" required>
+							<label for="email">Email</label>
+							<span class="underline" id="under-email"></span>
+						</div>
+							<div class="emailErr" id="email-error"></div>
+
+
+						<div class="field">
+							<input class="inpt-pass" type="password" name="password" id="pass" placeholder="Enter your password" oninput="typePass(this.value)" required>
+							<label for="pass">Password</label>
+							<span class="show-pass" onclick="shoPass()">
+													<i class="fas fa-eye" id="eye-icon" style="visibility: hidden"></i>
+												</span>
+							<span class="underline" id="under-pass"></span>
+						</div>
+						<div class="passErr" id="pass-error"></div>
+
+						<div class="btns">
+						<a href="#" class="login-btn" id="login">Sign Up</a>
+						</div>
+
+				</form>
+			</div>
+
+
+		</div>
+
+		<footer>© Copyright <span id="footer-year"></span></footer>
+
+
+		<script type="text/javascript"
+				src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+				(function(){
+					emailjs.init("w9uEx5h_rulm4pce1");
+				})();
+		</script>
+		<script src="js/main3.js"></script>
+    </body>
+</html>
